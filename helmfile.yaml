@@ -1,0 +1,13 @@
+repositories:
+  - name: hashicorp
+    url: https://helm.releases.hashicorp.com
+  - name: cnpg
+    url: https://cloudnative-pg.github.io/charts
+
+releases:
+  - name: vault
+    namespace: vault
+    chart: hashicorp/vault
+  - name: cnpg
+    namespace: cnpg-system
+    chart: cnpg/cloudnative-pg

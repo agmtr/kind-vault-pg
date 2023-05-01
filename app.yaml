@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+  labels:
+    app: app
+  annotations:
+    vault.hashicorp.com/agent-inject: "true"
+    vault.hashicorp.com/role: "app"
+    vault.hashicorp.com/agent-inject-secret-credentials.txt: "pg/creds/app"
+spec:
+  serviceAccountName: app
+  containers:
+    - name: app
+      image: jweissig/app:0.0.1
