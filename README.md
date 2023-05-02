@@ -41,6 +41,7 @@ export TF_VAR_pg_superuser_password=$(kubectl get secrets demo-cluster-superuser
 
 # terraform apply
 cd terraform
+terraform init
 terraform apply
 
 # test
