@@ -45,6 +45,6 @@ terraform init
 terraform apply
 
 # test
-kubectl create serviceaccount app-auth
+kubectl create serviceaccount app
 kubectl apply -f ../app.yaml
 kubectl exec -it app -c app -- cat /vault/secrets/credentials.txt
